@@ -14,3 +14,9 @@ Practica_1/*.pdf
 **/*.parquet
 **/*.feather
 **/*.pkl
+
+# Practica 2: generated data and models
+Practica_2/data/
+Practica_2/modelos/
+Practica_2/*.pkl
+Practica_2/setup_lstm.py
