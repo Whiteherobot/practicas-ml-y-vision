@@ -1,0 +1,16 @@
+# Python virtual environments
+.venv/
+.venv-1/
+
+# Jupyter
+**/.ipynb_checkpoints/
+
+# Practica 1: raw datasets and generated outputs
+Practica_1/electricityloaddiagrams20112014/
+Practica_1/resultados/
+Practica_1/*.pdf
+
+# Common generated data/artifacts
+**/*.parquet
+**/*.feather
+**/*.pkl
