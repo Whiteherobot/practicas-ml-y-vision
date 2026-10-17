@@ -1,22 +1,15 @@
-# Python virtual environments
 .venv/
-.venv-1/
+venv/
+.ipynb_checkpoints/
+__pycache__/
+.vscode/
 
-# Jupyter
-**/.ipynb_checkpoints/
+# Datos públicos que se descargan con el script de cada práctica
+aprendizaje-automatico/practica-1-consumo-electrico/electricityloaddiagrams20112014/
+aprendizaje-automatico/practica-1-consumo-electrico/resultados/
 
-# Practica 1: raw datasets and generated outputs
-Practica_1/electricityloaddiagrams20112014/
-Practica_1/resultados/
-Practica_1/*.pdf
-
-# Common generated data/artifacts
-**/*.parquet
-**/*.feather
-**/*.pkl
-
-# Practica 2: generated data and models
-Practica_2/data/
-Practica_2/modelos/
-Practica_2/*.pkl
-Practica_2/setup_lstm.py
+# Artefactos que generan los cuadernos
+aprendizaje-automatico/practica-2-demanda-retail/modelos/
+vision/practica-0-entropia/output/
+vision/practica-0-entropia/data/images_extracted/
+vision/practica-0-entropia/images_pr0.zip
