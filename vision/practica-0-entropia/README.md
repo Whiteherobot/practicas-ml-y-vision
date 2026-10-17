@@ -1,52 +1,19 @@
-# Práctica 0 - Entropía de Imágenes (Visión por Computador)
+# Práctica 0: entropía de imágenes
 
-Este proyecto procesa un dataset de imágenes (`images_pr0.zip`), calcula entropía a color y en escala de grises, genera gráficas, aplica modificaciones en al menos 10 imágenes y crea un **informe automático en HTML** (y PDF opcional).
-
-## 1) Requisitos
+Lee un conjunto de imágenes organizado por categorías, calcula la entropía en
+escala de grises y en color, compara categorías con histogramas y diagramas
+de caja, y a 10 imágenes les aplica tres niveles de modificación (un parche
+copiado de otra zona del 8, 16 o 28 % del tamaño y ruido gaussiano de sigma 5,
+12 o 20) para medir cómo cambia la entropía. Al final arma un informe en HTML (y en PDF si
+WeasyPrint está disponible) en `output/`.
 
 ```bash
-source /home/michi/venvs/cv-ai311/bin/activate
 pip install -r requirements.txt
+jupyter lab Practica0.ipynb
 ```
 
-## 2) Ejecutar análisis + informe automático
-
-```bash
-cd "/home/michi/Documents/Vision del computador/Practica 0"
-python run_practica0.py --zip "/ruta/a/images_pr0.zip"
-```
-
-Salida principal:
-- `output/report_latest.html`
-- `output/report_latest.pdf` (si el entorno permite PDF)
-
-## 3) Estructura esperada del zip
-
-Idealmente el zip debe tener subcarpetas por categoría, por ejemplo:
-
-```text
-images_pr0/
-  clase_1/
-    img1.jpg
-  clase_2/
-    img2.jpg
-```
-
-Si no hay subcarpetas, el script usará una categoría única: `sin_categoria`.
-
-## 4) Notebook Jupyter
-
-```bash
-jupyter lab
-```
-
-Abrir `Practica0.ipynb` para revisar/ejecutar flujo por celdas.
-
-## 5) Qué incluye el informe
-
-- Imagen + ruta + histogramas (gris y color) de muestra por categoría.
-- Entropía en gris y color para todas las imágenes.
-- Diagramas de cajas y bigotes por categoría (gris y color).
-- Explicación de entropía (general, gris y color).
-- Análisis de categorías con mayor entropía.
-- Modificaciones en 10 imágenes (pequeña, mediana, grande) y comparación en gráfico de barras.
+El cuaderno espera `images_pr0.zip` en esta carpeta, con una subcarpeta por
+categoría (por ejemplo `training_set/flowers/*.jpg`). El conjunto que se usó
+en clase no está en el repositorio porque no tiene una fuente ni una licencia
+identificables; sirve cualquier conjunto de imágenes con esa estructura. Las
+salidas guardadas en el cuaderno son las de aquella ejecución.
